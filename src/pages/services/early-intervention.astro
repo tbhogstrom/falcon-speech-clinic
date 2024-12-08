@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServiceHero from '../../components/ServiceHero.astro';
+import WaveformBackground from '../../components/WaveformBackground';
+
+const signs = [
+  "Limited babbling or vocal play",
+  "Delayed first words",
+  "Difficulty following simple directions",
+  "Limited gesture use",
+  "Reduced social interaction"
+];
+
+const benefits = [
+  "Faster progress in communication development",
+  "Prevention of secondary challenges",
+  "Increased school readiness",
+  "Better social-emotional development",
+  "Enhanced parent-child interaction"
+];
+---
+
+<Layout 
+  title="Early Intervention"
+  description="Early intervention speech therapy services in Portland, Oregon. Supporting communication development from the start."
+>
+  <WaveformBackground client:load />
+  <ServiceHero
+    title="Early Intervention"
+    description="Early support for optimal communication development in young children"
+    imageUrl="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=1200"
+  />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-2xl font-bold text-sky-900 mb-6">Why Early Intervention Matters</h2>
+        <p class="text-gray-600 mb-6">
+          The first three years of life are crucial for communication development. Early intervention can significantly impact a child's developmental trajectory and future success. At Falcon Speech Therapy in Portland, we specialize in identifying and addressing communication challenges early.
+        </p>
+        <h3 class="text-xl font-semibold text-sky-800 mb-4">Signs That May Indicate Need for Early Intervention</h3>
+        <ul class="space-y-2">
+          {signs.map(sign => (
+            <li class="flex items-start">
+              <span class="text-sky-500 mr-2">•</span>
+              <span class="text-gray-600">{sign}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-sky-900 mb-6">Benefits of Early Intervention</h2>
+        <p class="text-gray-600 mb-6">
+          Research shows that early intervention leads to better outcomes. Our program focuses on empowering both children and parents with the tools needed for communication success.
+        </p>
+        <h3 class="text-xl font-semibold text-sky-800 mb-4">Key Benefits</h3>
+        <ul class="space-y-2">
+          {benefits.map(benefit => (
+            <li class="flex items-start">
+              <span class="text-sky-500 mr-2">•</span>
+              <span class="text-gray-600">{benefit}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 bg-white rounded-xl p-8 shadow-lg">
+      <h2 class="text-2xl font-bold text-sky-900 mb-6">Our Early Intervention Approach</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold text-sky-800 mb-3">Family-Centered</h3>
+          <p class="text-gray-600">
+            We work closely with families, providing strategies and support for communication development at home.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-sky-800 mb-3">Play-Based</h3>
+          <p class="text-gray-600">
+            Our therapy sessions use natural play activities to promote communication development.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-sky-800 mb-3">Evidence-Based</h3>
+          <p class="text-gray-600">
+            We use proven therapeutic approaches tailored to each child's unique needs.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 text-center">
+      <h2 class="text-2xl font-bold text-sky-900 mb-6">Start Early for the Best Outcomes</h2>
+      <div class="flex justify-center space-x-4">
+        <a
+          href="/screening"
+          class="bg-sky-600 text-white px-8 py-3 rounded-full hover:bg-sky-700 transition"
+        >
+          Schedule a Free Screening
+        </a>
+        <a
+          href="/contact"
+          class="bg-yellow-500 text-sky-900 px-8 py-3 rounded-full hover:bg-yellow-400 transition"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServiceHero from '../../components/ServiceHero.astro';
+import WaveformBackground from '../../components/WaveformBackground';
+
+const areas = [
+  "Receptive language (understanding)",
+  "Expressive language (speaking)",
+  "Vocabulary development",
+  "Grammar and syntax",
+  "Social communication skills"
+];
+
+const approaches = [
+  "Play-based therapy sessions",
+  "Language-rich activities",
+  "Story-based interventions",
+  "Social skills groups",
+  "Parent coaching"
+];
+---
+
+<Layout 
+  title="Language Development"
+  description="Comprehensive language development therapy in Portland, Oregon. We help children build strong communication skills."
+>
+  <WaveformBackground client:load />
+  <ServiceHero
+    title="Language Development"
+    description="Building strong foundations for effective communication and academic success"
+    imageUrl="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&q=80&w=1200"
+  />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-2xl font-bold text-sky-900 mb-6">Language Development Services</h2>
+        <p class="text-gray-600 mb-6">
+          Language development is crucial for academic success, social relationships, and overall communication. Our Portland-based therapy services focus on building strong language skills through engaging and evidence-based interventions.
+        </p>
+        <h3 class="text-xl font-semibold text-sky-800 mb-4">Areas We Address</h3>
+        <ul class="space-y-2">
+          {areas.map(area => (
+            <li class="flex items-start">
+              <span class="text-sky-500 mr-2">•</span>
+              <span class="text-gray-600">{area}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-sky-900 mb-6">Our Therapeutic Approach</h2>
+        <p class="text-gray-600 mb-6">
+          We use a combination of structured activities and naturalistic learning opportunities to help children develop strong language skills. Our approach is tailored to each child's interests and needs.
+        </p>
+        <h3 class="text-xl font-semibold text-sky-800 mb-4">Treatment Methods</h3>
+        <ul class="space-y-2">
+          {approaches.map(approach => (
+            <li class="flex items-start">
+              <span class="text-sky-500 mr-2">•</span>
+              <span class="text-gray-600">{approach}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 bg-white rounded-xl p-8 shadow-lg">
+      <h2 class="text-2xl font-bold text-sky-900 mb-6">Benefits of Early Language Intervention</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold text-sky-800 mb-3">Academic Success</h3>
+          <p class="text-gray-600">
+            Strong language skills form the foundation for reading, writing, and learning across all subjects.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-sky-800 mb-3">Social Connections</h3>
+          <p class="text-gray-600">
+            Better language skills help children form friendships and navigate social situations.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-sky-800 mb-3">Confidence Building</h3>
+          <p class="text-gray-600">
+            Improved communication abilities boost self-esteem and participation in activities.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 text-center">
+      <h2 class="text-2xl font-bold text-sky-900 mb-6">Start Your Child's Language Journey</h2>
+      <div class="flex justify-center space-x-4">
+        <a
+          href="/screening"
+          class="bg-sky-600 text-white px-8 py-3 rounded-full hover:bg-sky-700 transition"
+        >
+          Schedule a Free Screening
+        </a>
+        <a
+          href="/contact"
+          class="bg-yellow-500 text-sky-900 px-8 py-3 rounded-full hover:bg-yellow-400 transition"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

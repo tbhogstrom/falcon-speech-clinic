@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServiceHero from '../../components/ServiceHero.astro';
+import WaveformBackground from '../../components/WaveformBackground';
+
+const techniques = [
+  "Fluency shaping techniques",
+  "Stuttering modification strategies",
+  "Cognitive behavioral therapy approaches",
+  "Relaxation and breathing exercises",
+  "Confidence building activities"
+];
+
+const support = [
+  "Individual therapy sessions",
+  "Group therapy opportunities",
+  "Parent education and support",
+  "School consultation services",
+  "Ongoing progress monitoring"
+];
+---
+
+<Layout 
+  title="Stuttering Therapy"
+  description="Comprehensive stuttering therapy in Portland, Oregon. Building confidence and communication skills."
+>
+  <WaveformBackground client:load />
+  <ServiceHero
+    title="Stuttering Therapy"
+    description="Comprehensive support for individuals who stutter, focusing on fluency and confidence"
+    imageUrl="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1200"
+  />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-2xl font-bold text-sky-900 mb-6">Understanding Stuttering</h2>
+        <p class="text-gray-600 mb-6">
+          Stuttering is a complex communication disorder that affects the fluency of speech. At Falcon Speech Therapy in Portland, we provide comprehensive evaluation and treatment using evidence-based approaches that address both the physical and emotional aspects of stuttering.
+        </p>
+        <h3 class="text-xl font-semibold text-sky-800 mb-4">Treatment Techniques</h3>
+        <ul class="space-y-2">
+          {techniques.map(technique => (
+            <li class="flex items-start">
+              <span class="text-sky-500 mr-2">•</span>
+              <span class="text-gray-600">{technique}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-sky-900 mb-6">Comprehensive Support</h2>
+        <p class="text-gray-600 mb-6">
+          Our approach to stuttering therapy goes beyond fluency techniques. We provide comprehensive support to address all aspects of communication and build lasting confidence.
+        </p>
+        <h3 class="text-xl font-semibold text-sky-800 mb-4">Support Services</h3>
+        <ul class="space-y-2">
+          {support.map(item => (
+            <li class="flex items-start">
+              <span class="text-sky-500 mr-2">•</span>
+              <span class="text-gray-600">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 bg-white rounded-xl p-8 shadow-lg">
+      <h2 class="text-2xl font-bold text-sky-900 mb-6">Our Approach to Stuttering Therapy</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold text-sky-800 mb-3">Holistic Treatment</h3>
+          <p class="text-gray-600">
+            We address both the physical aspects of stuttering and its impact on daily life and confidence.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-sky-800 mb-3">Evidence-Based</h3>
+          <p class="text-gray-600">
+            Our treatment approaches are based on the latest research in stuttering intervention.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-sky-800 mb-3">Supportive Environment</h3>
+          <p class="text-gray-600">
+            We create a safe, accepting environment where clients can work on their communication goals.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 text-center">
+      <h2 class="text-2xl font-bold text-sky-900 mb-6">Begin Your Journey to Confident Communication</h2>
+      <div class="flex justify-center space-x-4">
+        <a
+          href="/screening"
+          class="bg-sky-600 text-white px-8 py-3 rounded-full hover:bg-sky-700 transition"
+        >
+          Schedule a Free Screening
+        </a>
+        <a
+          href="/contact"
+          class="bg-yellow-500 text-sky-900 px-8 py-3 rounded-full hover:bg-yellow-400 transition"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

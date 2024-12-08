@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WaveformBackground from '../components/WaveformBackground';
+import ServiceCard from '../components/ServiceCard.astro';
+import { MessageSquare, Brain, Sparkles } from 'lucide-react';
+
+const services = [
+  {
+    title: "Speech & Language",
+    description: "Comprehensive evaluation and therapy for speech sound disorders and language development.",
+    icon: MessageSquare
+  },
+  {
+    title: "Early Intervention",
+    description: "Early support for children showing signs of communication difficulties.",
+    icon: Brain
+  },
+  {
+    title: "AAC Services",
+    description: "Augmentative and alternative communication solutions for diverse needs.",
+    icon: Sparkles
+  }
+];
+---
+
+<Layout title="Home">
+  <div class="relative">
+    <WaveformBackground client:load />
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <!-- Hero Section -->
+      <div class="text-center mb-16">
+        <div class="flex justify-center mb-6">
+          <img
+            src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1200&q=80"
+            alt="Falcon in nest"
+            class="rounded-lg shadow-xl"
+          />
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold text-sky-900 mb-4">
+          Watch Your Child Soar
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Specialized speech therapy services for children and adolescents in Portland, Oregon
+        </p>
+        <div class="flex justify-center space-x-4">
+          <a
+            href="/screening"
+            class="bg-sky-600 text-white px-8 py-3 rounded-full hover:bg-sky-700 transition"
+          >
+            Free Screening
+          </a>
+          <a
+            href="/contact"
+            class="bg-yellow-500 text-sky-900 px-8 py-3 rounded-full hover:bg-yellow-400 transition"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        {services.map(service => (
+          <ServiceCard {...service} />
+        ))}
+      </div>
+
+      <!-- Why Choose Us -->
+      <div class="bg-sky-50 rounded-xl p-8 mb-16">
+        <h2 class="text-3xl font-bold text-center text-sky-900 mb-8">
+          Why Choose Falcon Speech Therapy?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Experienced Team</h3>
+            <p class="text-gray-600">
+              Our certified speech-language pathologists have extensive experience working with children of all ages.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Personalized Care</h3>
+            <p class="text-gray-600">
+              We develop individualized treatment plans tailored to each child's unique needs and goals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

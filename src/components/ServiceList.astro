@@ -1,0 +1,67 @@
+---
+import { MessageSquare, Brain, Sparkles, Speech, Workflow, Users, GraduationCap, HeartHandshake } from 'lucide-react';
+
+export const services = [
+  {
+    title: "Speech Sound Disorders",
+    description: "Comprehensive evaluation and therapy for speech sound disorders.",
+    icon: Speech,
+    href: "/services/speech-sound-disorders"
+  },
+  {
+    title: "Language Development",
+    description: "Building strong foundations for effective communication.",
+    icon: MessageSquare,
+    href: "/services/language-development"
+  },
+  {
+    title: "Early Intervention",
+    description: "Early support for optimal communication development.",
+    icon: Brain,
+    href: "/services/early-intervention"
+  },
+  {
+    title: "Stuttering Therapy",
+    description: "Comprehensive support for fluent communication.",
+    icon: Workflow,
+    href: "/services/stuttering-therapy"
+  },
+  {
+    title: "AAC Services",
+    description: "Alternative communication solutions for diverse needs.",
+    icon: Sparkles,
+    href: "/services/aac-services"
+  },
+  {
+    title: "Community Transitions",
+    description: "Supporting transitions from high school to careers.",
+    icon: Users,
+    href: "/services/community-transitions"
+  },
+  {
+    title: "IEP Advocacy",
+    description: "Expert support for IEP meetings and planning.",
+    icon: HeartHandshake,
+    href: "/services/iep-advocacy"
+  },
+  {
+    title: "SLP Mentorship",
+    description: "Graduate student supervision and mentorship.",
+    icon: GraduationCap,
+    href: "/services/slp-mentorship"
+  }
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  {services.map(({ title, description, icon: Icon, href }) => (
+    <a 
+      href={href}
+      class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition group"
+    >
+      <Icon className="h-12 w-12 text-sky-600 mb-4 group-hover:text-sky-500 transition" />
+      <h3 class="text-xl font-semibold mb-2 group-hover:text-sky-600 transition">{title}</h3>
+      <p class="text-gray-600">{description}</p>
+    </a>
+  ))}
+</div>

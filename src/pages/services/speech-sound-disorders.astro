@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServiceHero from '../../components/ServiceHero.astro';
+import WaveformBackground from '../../components/WaveformBackground';
+
+const symptoms = [
+  "Difficulty pronouncing specific sounds",
+  "Substituting one sound for another",
+  "Leaving out sounds in words",
+  "Adding extra sounds to words",
+  "Distorting sounds when speaking"
+];
+
+const treatments = [
+  "Individual therapy sessions",
+  "Sound-specific exercises",
+  "Play-based therapy activities",
+  "Parent education and home practice",
+  "Progress monitoring and adjustments"
+];
+---
+
+<Layout 
+  title="Speech Sound Disorders"
+  description="Expert speech sound disorder therapy in Portland, Oregon. We help children develop clear and confident speech."
+>
+  <WaveformBackground client:load />
+  <ServiceHero
+    title="Speech Sound Disorders"
+    description="Specialized therapy to help children develop clear and confident speech patterns"
+    imageUrl="https://images.unsplash.com/photo-1543269664-56d93c1b41a6?auto=format&fit=crop&q=80&w=1200"
+  />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-2xl font-bold text-sky-900 mb-6">Understanding Speech Sound Disorders</h2>
+        <p class="text-gray-600 mb-6">
+          Speech sound disorders affect a child's ability to correctly produce speech sounds, impacting their communication and confidence. At Falcon Speech Therapy in Portland, we provide comprehensive evaluation and treatment for children struggling with speech sound production.
+        </p>
+        <h3 class="text-xl font-semibold text-sky-800 mb-4">Common Signs & Symptoms</h3>
+        <ul class="space-y-2">
+          {symptoms.map(symptom => (
+            <li class="flex items-start">
+              <span class="text-sky-500 mr-2">•</span>
+              <span class="text-gray-600">{symptom}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-sky-900 mb-6">Our Treatment Approach</h2>
+        <p class="text-gray-600 mb-6">
+          We develop personalized treatment plans using evidence-based practices to help children improve their speech sound production. Our approach combines structured practice with engaging activities to maintain motivation and progress.
+        </p>
+        <h3 class="text-xl font-semibold text-sky-800 mb-4">Treatment Components</h3>
+        <ul class="space-y-2">
+          {treatments.map(treatment => (
+            <li class="flex items-start">
+              <span class="text-sky-500 mr-2">•</span>
+              <span class="text-gray-600">{treatment}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 bg-white rounded-xl p-8 shadow-lg">
+      <h2 class="text-2xl font-bold text-sky-900 mb-6">Why Choose Falcon Speech Therapy?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold text-sky-800 mb-3">Experienced Team</h3>
+          <p class="text-gray-600">
+            Our speech-language pathologists have extensive experience treating speech sound disorders in children of all ages.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-sky-800 mb-3">Personalized Care</h3>
+          <p class="text-gray-600">
+            We create individualized treatment plans tailored to your child's specific needs and goals.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-sky-800 mb-3">Family-Centered</h3>
+          <p class="text-gray-600">
+            We involve parents in the therapy process and provide resources for home practice.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 text-center">
+      <h2 class="text-2xl font-bold text-sky-900 mb-6">Ready to Get Started?</h2>
+      <div class="flex justify-center space-x-4">
+        <a
+          href="/screening"
+          class="bg-sky-600 text-white px-8 py-3 rounded-full hover:bg-sky-700 transition"
+        >
+          Schedule a Free Screening
+        </a>
+        <a
+          href="/contact"
+          class="bg-yellow-500 text-sky-900 px-8 py-3 rounded-full hover:bg-yellow-400 transition"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

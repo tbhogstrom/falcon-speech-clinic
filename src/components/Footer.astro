@@ -1,0 +1,56 @@
+---
+import { Bird, Phone, Mail, MapPin } from 'lucide-react';
+import { services } from './ServiceList.astro';
+
+---
+
+<footer class="bg-sky-800 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center space-x-2">
+          <Bird className="h-6 w-6" />
+          <span class="font-bold text-lg">Falcon Speech Therapy</span>
+        </div>
+        <p class="mt-2 text-sky-200">
+          Empowering voices, building futures.
+        </p>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold mb-4">Contact</h3>
+        <div class="space-y-2 text-sky-200">
+          <p class="flex items-center"><Phone className="h-4 w-4 mr-2" /> (503) 555-0123</p>
+          <p class="flex items-center"><Mail className="h-4 w-4 mr-2" /> info@falconspeech.com</p>
+          <p class="flex items-center"><MapPin className="h-4 w-4 mr-2" /> Portland, Oregon</p>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold mb-4">Services</h3>
+        <ul class="space-y-2 text-sky-200">
+          {services.slice(0, 5).map(service => (
+            <li>
+              <a href={service.href} class="hover:text-white transition">
+                {service.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold mb-4">Hours</h3>
+        <ul class="space-y-2 text-sky-200">
+          <li>Monday - Friday: 8am - 6pm</li>
+          <li>Saturday: 9am - 2pm</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="mt-8 pt-8 border-t border-sky-700 text-center text-sky-200">
+      <p>&copy; {new Date().getFullYear()} Falcon Speech Therapy. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
