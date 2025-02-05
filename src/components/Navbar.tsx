@@ -13,13 +13,12 @@ export default function Navbar() {
           </Link>
           
           <div className="hidden md:flex space-x-6">
-            <Link to="/services" className="hover:text-sky-200 transition">Services</Link>
+            <Link to="/" className="hover:text-sky-200 transition">Home</Link>
             <Link to="/about" className="hover:text-sky-200 transition">About</Link>
+            <Link to="/services" className="hover:text-sky-200 transition">Services</Link>
             <Link to="/resources" className="hover:text-sky-200 transition">Resources</Link>
+            <Link to="/blog" className="hover:text-sky-200 transition">Blog</Link>
             <Link to="/contact" className="hover:text-sky-200 transition">Contact</Link>
-            <Link to="/screening" className="bg-yellow-500 text-sky-900 px-4 py-2 rounded-full hover:bg-yellow-400 transition">
-              Free Screening
-            </Link>
           </div>
         </div>
       </div>
