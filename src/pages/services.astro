@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WaveformBackground from '../components/WaveformBackground.astro';
+import { MessageSquare, Brain, Sparkles, Speech, Workflow, Users, GraduationCap, HeartHandshake } from 'lucide-react';
+
+const services = [
+  {
+    title: "Speech Sound Disorders",
+    description: "Comprehensive evaluation and therapy for speech sound disorders.",
+    icon: Speech
+  },
+  {
+    title: "Language Development",
+    description: "Building strong foundations for effective communication.",
+    icon: MessageSquare
+  },
+  // ... other services
+];
+---
+
+<Layout title="Services">
+  <div class="relative">
+    <WaveformBackground client:load />
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-sky-900 mb-4">Our Services</h1>
+        <p class="text-xl text-gray-600">
+          Comprehensive speech therapy services for children of all ages
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service) => {
+          const Icon = service.icon;
+          return (
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <Icon class="h-12 w-12 text-sky-600 mb-4" />
+              <h3 class="text-xl font-semibold mb-2">{service.title}</h3>
+              <p class="text-gray-600">{service.description}</p>
+            </div>
+          )}
+        )}
+      </div>
+    </div>
+  </div>
+</Layout> 

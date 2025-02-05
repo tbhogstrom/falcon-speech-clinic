@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WaveformBackground from '../components/WaveformBackground.astro';
+---
+
+<Layout title="Resources">
+  <div class="relative">
+    <WaveformBackground client:load />
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-sky-900 mb-4">Resources</h1>
+        <p class="text-xl text-gray-600">
+          Helpful information for parents and caregivers
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Resource content -->
+      </div>
+    </div>
+  </div>
+</Layout> 
