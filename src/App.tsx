@@ -1,8 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import NotFound from './pages/NotFound'; // Create this page if you don't already have it
 
 function App() {
   return (
@@ -10,9 +11,11 @@ function App() {
       <div className="min-h-screen flex flex-col bg-gray-50">
         <Navbar />
         <main className="flex-grow">
-          <Routes>
+          <Route>
             <Route path="/" element={<Home />} />
-          </Routes>
+            {/* Fallback route for unmatched paths */}
+            <Route path="*" element={<NotFound />} />
+          </Route>
         </main>
         <Footer />
       </div>
