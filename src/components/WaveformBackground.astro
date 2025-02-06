@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
   {[...Array(5)].map((_, i) => (
     <motion.div
       key={i}
+      client:load
       class="absolute h-px bg-sky-600 w-full"
       style={{ top: `${20 + i * 15}%` }}
       animate={{

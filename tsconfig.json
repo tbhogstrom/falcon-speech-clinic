@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "esModuleInterop": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    // ... other options
+    "jsx": "preserve",
+    "jsxImportSource": "preact" // or remove JSX entirely
   }
-} 
+}
