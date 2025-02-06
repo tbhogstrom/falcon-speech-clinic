@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "jsx": "preserve",
-    "jsxImportSource": "preact" // or remove JSX entirely
+    "jsx": "react-jsx"
   }
 }

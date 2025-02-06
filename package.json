@@ -12,8 +12,8 @@
   "dependencies": {
     "@astrojs/react": "^3.6.3",
     "@astrojs/tailwind": "^5.1.0",
-    "@types/react": "^18.2.55",
-    "@types/react-dom": "^18.2.19",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
     "astro": "^4.4.0",
     "framer-motion": "^11.0.8",
     "lucide-react": "^0.344.0",
