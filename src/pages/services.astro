@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import WaveformBackground from '../components/WaveformBackground.astro';
 import { MessageSquare, Brain, Sparkles, Speech, Workflow, Users, GraduationCap, HeartHandshake } from 'lucide-react';
+import { App } from '../components/react/App';
 
 const services = [
   {
@@ -44,4 +45,5 @@ const services = [
       </div>
     </div>
   </div>
+  <App client:only="react" />
 </Layout> 

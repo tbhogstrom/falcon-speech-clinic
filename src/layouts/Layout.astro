@@ -1,6 +1,6 @@
 ---
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
+import Navbar from '../components/react/Navbar';
+import Footer from '../components/react/Footer';
 import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
@@ -26,10 +26,10 @@ const {
     <ViewTransitions />
   </head>
   <body class="min-h-screen flex flex-col bg-gray-50">
-    <Navbar />
+    <Navbar client:load />
     <main class="flex-grow">
       <slot />
     </main>
-    <Footer />
+    <Footer client:load />
   </body>
 </html>
